@@ -1,0 +1,17 @@
+{
+    "name": "elvie/estore",
+    "autoload": {
+        "psr-4": {
+            "Elvie\\Estore\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "elvisjobita",
+            "email": "elvieslovietoh@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "9.5.0"
+    }
+}
