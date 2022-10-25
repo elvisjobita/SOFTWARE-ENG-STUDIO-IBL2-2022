@@ -1,39 +1,40 @@
-name: PHP Composer
+name: Basic-CI
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
-permissions:
-  contents: read
+on: [push, pull_request]
 
 jobs:
-  build:
-
+  tests:
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v3
+      - name: "Checkout latest revision"
+        uses: actions/checkout@v2
+      - name: "Install PHP with extensions"
+        uses: shivammathur/setup-php@v1
+        with:
 
-    - name: Validate composer.json and composer.lock
-      run: composer validate --strict
+          php-version: '7.4'
 
-    - name: Cache Composer packages
-      id: composer-cache
-      uses: actions/cache@v3
-      with:
-        path: vendor
-        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-php-
 
-    - name: Install dependencies
-      run: composer install --prefer-dist --no-progress
+          coverage: xdebug
 
-    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-    # Docs: https://getcomposer.org/doc/articles/scripts.md
 
-    # - name: Run test suite
-    #   run: composer run-script test
+          extensions: xdebug, intl, pdo_mysql, pdo
+
+
+      - name: Install composer
+        run: curl --show-error --silent https://getcomposer.org/installer | php
+
+
+      - name: Install composer dependencies
+        run: php composer.phar install
+
+
+      - name: Run PHPUnit tests
+        run: php vendor/bin/phpunit --configuration=phpunit.xml --coverage-clover ./build/coverage/log/coverage.xml
+
+      - name: Downloading scrutinizer ocular.phar
+        run: wget https://scrutinizer-ci.com/ocular.phar
+
+      # Uploading reports for analysis
+      # - name: Uploading code coverage to scrutinize
+      #   run: php ocular.phar code-coverage:upload --format=php-clover ./build/coverage/log/coverage.xml
