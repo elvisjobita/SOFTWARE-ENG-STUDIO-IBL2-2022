@@ -3,7 +3,7 @@
         'name' => 'elvie/estore',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'ae44492a78a0c4fc8875f1bfe0e456992cb2c0cd',
+        'reference' => '8a497351bbea91f1aa81ab2b24e0ec6d22d4c821',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -22,7 +22,7 @@
         'elvie/estore' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'ae44492a78a0c4fc8875f1bfe0e456992cb2c0cd',
+            'reference' => '8a497351bbea91f1aa81ab2b24e0ec6d22d4c821',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
