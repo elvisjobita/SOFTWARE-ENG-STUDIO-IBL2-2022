@@ -110,10 +110,10 @@ $items_arr = getItems();
 
       <div class="jumbotron my-4 py-4">
         <p>
-          Thank you for wanting to shop with us. We have the best
-          deals for school kids accessories. Your kids will love
-          our products, and that's a promise!
-        </p>
+          Thank you for wanting to shop with us.We made your dreams real.
+            Construct a safe world with the World's best place for your building material.
+            We give guarantee for your safety.
+            New dreams, new home with us!</p>
         <p>To view more products, go to
           <a href=<?php echo BASE_URL . "catalog.php" ?>> catalog</a>
         </p>
