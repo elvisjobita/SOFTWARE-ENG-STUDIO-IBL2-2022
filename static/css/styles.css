@@ -1,0 +1,122 @@
+/* ================= Root Styles ================= */
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+  }
+  
+  /* ================= Hero Section ========================= */
+  #hero-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("../img/hero-bg.jpg");
+    height: 95vh;
+    background-size: cover;
+    background-position: top;
+    color: #fff;
+    padding-top: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 4rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.5rem;
+  }
+  
+  .hero-text {
+    font-size: large;
+  }
+  
+  .hero-btn {
+    padding: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    background-color: #2780E3;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 2rem;
+    transition: .2s ease-in-out;
+  }
+  
+  .hero-btn:hover {
+    color: #ccc;
+    text-decoration: none;
+    transform: translateY(5px);
+  }
+  
+  
+  /* ================= Login and Signup Form ================= */
+  #login-form,
+  #signup-form {
+    max-width: 500px;
+  }
+  
+  /* ================= Cards Grid ================= */
+  #available-grid,
+  #featured-grid,
+  #catalog-grid {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  /* ================= Product Detail ================= */
+  .product-detail-container {
+    max-width: 50rem;
+  }
+  
+  /* ================ Cart ================== */
+  .cart-details {
+    max-height: 70vh;
+    overflow-y: scroll;
+  }
+  
+  #cart-qty {
+    display: block;
+    width: 4rem;
+  }
+  
+  /* ================= Utilities ================= */
+  .hide {
+    display: none;
+  }
+  
+  .disabled-link {
+    pointer-events: none;
+    background-color: #dddddd;
+  }
+  
+  .w-min {
+    width: min-content;
+  }
+  
+  .w-max {
+    width: max-content;
+  }
+  
+  .h-min {
+    height: min-content;
+  }
+  
+  .h-max {
+    height: max-content;
+  }
+  
+  /* ================= Media Query =================== */
+  @media (min-width: 768px) {
+    #hero-section {
+      padding-top: 4rem;
+    }
+  
+    .hero-title {
+      letter-spacing: .4rem;
+    }
+  
+    .hero-btn {
+      margin-top: 4rem;
+    }
+  }

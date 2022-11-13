@@ -18,11 +18,22 @@ $items_arr = getItems();
   <section id="hero-section">
     <div class="container">
       <h1 class="hero-title">
-        ESTORE
+      DELTA HARDWARE ESTORE
       </h1>
 
+      <p class="hero-subtitle">
+        Your one stop shop for <br />
+        <kbd>Building and Construction Materials</kbd>
+      </p>
 
+      <p class="hero-text">
+          Your safety is our priority
+          Your satisfaction our dream.
+          <br />  Construct your dream home with us.
+          <br />  Our aim is that you will be safe.
+          <br />  Best quality construction material with low cost!!
 
+      </p>
       <a href="#featured" class="hero-btn shadow">Start Shopping</a>
     </div>
   </section>

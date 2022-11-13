@@ -5,7 +5,7 @@ class InventoryCheckTest extends \PHPUnit\Framework\TestCase
 {
 
     function setUp(): void{
-        $inventory = new App\Inventory;
+        // $inventory = new App\Inventory;
     }
 
     public function testMinAmount()
