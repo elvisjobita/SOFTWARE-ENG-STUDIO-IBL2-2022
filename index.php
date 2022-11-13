@@ -53,6 +53,29 @@ $items_arr = getItems();
     <?php } else { ?>
       <?php $count = 0; ?>
 
+      <!-- Featured Products Section -->
+      <section id="featured" class="my-4">
+        <h2 class="text-muted my-5">Featured Products</h2>
+
+        <div class="border shadow p-2" id="featured-grid">
+          <?php foreach ($items_arr as $key => $value) {
+            // We use lists short-hand to destructure values
+            [
+              "id"       => $id,
+              "slug"     => $slug,
+              "name"     => $name,
+              "price"    => $price,
+              "image"    => $image,
+              "discount" => $discount,
+            ] = $value;
+            if ($value["is_featured"] == 1 && $count < 4) {
+              showPreview($image, $name, $id, $price, $discount, $slug);
+              $count++;
+            }
+          } ?>
+        </div>
+      </section>
+
 
       <!-- Available Products Section -->
       <section id="available" class="my-4">
